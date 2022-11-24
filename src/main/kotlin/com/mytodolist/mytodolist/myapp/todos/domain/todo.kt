@@ -28,5 +28,6 @@ data class Todo(
     val id: TodoId,
     val name: String,
     val description: Description,
+    val todoProject: String,
     val createdAt: LocalDateTime
 )

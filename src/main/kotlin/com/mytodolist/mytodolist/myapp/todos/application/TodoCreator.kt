@@ -7,7 +7,7 @@ import java.time.LocalDateTime
 
 class TodoCreator() {
 
-    fun create(id: String, name: String, description: String) : Todo {
-        return Todo(TodoId.fromString(id), name, Description(description), LocalDateTime.now())
+    fun create(id: String, name: String, description: String, project: String) : Todo {
+        return Todo(TodoId.fromString(id), name, Description(description), project, LocalDateTime.now())
     }
 }

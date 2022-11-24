@@ -19,7 +19,7 @@ class TodoCreatorController(private val todoCreator: TodoCreator) {
         @RequestBody request: CreateTodoRequest
     ): ResponseEntity<String> {
         return try {
-            todoCreator.create(request.id, request.name, request.description)
+            todoCreator.create(request.id, request.name, request.description, request.project)
             ResponseEntity.created(URI.create("/course/${request.id}")).build()
         } catch (exception: TodoException) {
             when (exception) {
@@ -42,5 +42,6 @@ class TodoCreatorController(private val todoCreator: TodoCreator) {
 data class CreateTodoRequest(
     val id: String,
     val name: String,
-    val description: String
+    val description: String,
+    val project: String
 )
