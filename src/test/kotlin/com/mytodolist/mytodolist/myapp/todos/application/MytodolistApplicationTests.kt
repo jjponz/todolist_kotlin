@@ -1,4 +1,4 @@
-package com.mytodolist.mytodolist
+package com.mytodolist.mytodolist.myapp.todos.application
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test

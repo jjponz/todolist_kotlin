@@ -4,5 +4,4 @@ data class project (
     val id: String,
     val name: String,
     val owner: String,
-    val todolist: List<TodoProject>
     )
